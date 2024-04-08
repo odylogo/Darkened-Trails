@@ -51,6 +51,7 @@ body::before {
 }
 .inside-inv {
   display: none;
+  list-style-type: none;
 }
 .inventory:hover .inside-inv {
   display: block;
@@ -58,6 +59,8 @@ body::before {
   width: 15%;
   border: 0.5px solid black;
   margin-left: -1px;
+  width: fit-content;
+  list-style-type: none;
 }
 
 .dialog-box {
