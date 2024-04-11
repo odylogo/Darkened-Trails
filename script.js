@@ -5,34 +5,31 @@ class Enemy {
     this.calculateStats();
   }
   calculateStats() {
-    const levelMultiplier = this.level * 0.1;
-    this.attack = Math.floor(Math.random() * 10 + levelMultiplier * 5);
-    this.defense = Math.floor(Math.random() * 10 + levelMultiplier * 3);
-    this.armor = Math.floor(Math.random() * 10 + levelMultiplier * 2);
-    this.health = Math.floor(Math.random() * 50 + levelMultiplier * 10);
+    const randomLevel = this.level * 0.1;
+    this.attack = Math.floor(Math.random() * 10 + randomLevel * 5);
+    this.defense = Math.floor(Math.random() * 10 + randomLevel * 3);
+    this.armor = Math.floor(Math.random() * 10 + randomLevel * 2);
+    this.health = Math.floor(Math.random() * 50 + randomLevel * 10);
   }
 }
 
-const enemyTypes = [
-  "spider",
-  "troll",
-  "wolf",
-  "crow",
-  "phantom",
-  "giant squid",
-  "fellbeast",
-  "nazgull",
-  "dragon",
-  "balrog",
-  "mumakil",
-  "orq",
-  "goblin",
-];
+const enemyTypes = ["spider", "troll", "wolf", "crow", "orq", "goblin"];
 
-function spawnRandomEnemy() {
-  let randomTypeIndex = Math.floor(Math.random() * enemyTypes.length);
+function randomEnemy() {
+  let randomTypeList = Math.floor(Math.random() * enemyTypes.length);
   let randomLevel = Math.floor(Math.random() * 10) + 1;
-  spawnEnemy(enemyTypes[randomTypeIndex], randomLevel);
+  spawnEnemy(enemyTypes[randomTypeList], randomLevel);
 }
 
-spawnRandomEnemy();
+//spawnRandomEnemy();
+// Επιλέγουμε το στοιχείο κουμπιού με το id "optionA"
+const optionAButton = document.getElementById("optionA");
+
+// Προσθέτουμε έναν ακροατή για το γεγονός "click" στο κουμπί "optionA"
+optionAButton.addEventListener("click", function () {
+  // Επιλέγουμε το στοιχείο παραγράφου μέσα στην κλάση "dialog"
+  const dialogParagraph = document.querySelector(".dialog p");
+
+  // Αλλάζουμε το περιεχόμενο του παραγράφου
+  dialogParagraph.textContent = "Νέο περιεχόμενο για την επιλογή Α";
+});

@@ -5,6 +5,7 @@ body {
   background-color: rgba(1, 75, 30, 0.652);
   position: relative;
   overflow: hidden;
+  font-family: "Cinzel", serif;
 }
 
 body::before {
