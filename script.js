@@ -13,7 +13,7 @@ class Enemy {
   }
 }
 
-const enemyTypes = ['spider', 'troll', 'wolf', 'crow', 'orq', 'goblin'];
+const enemyTypes = ["spider", "troll", "wolf", "crow", "orq", "goblin"];
 
 function randomEnemy() {
   const randomTypeList = Math.floor(Math.random() * enemyTypes.length);
@@ -23,13 +23,13 @@ function randomEnemy() {
 
 // spawnRandomEnemy();
 // Επιλέγουμε το στοιχείο κουμπιού με το id "optionA"
-const optionAButton = document.getElementById('optionA');
+const optionAButton = document.getElementById("optionA");
 
 // Προσθέτουμε έναν ακροατή για το γεγονός "click" στο κουμπί "optionA"
-optionAButton.addEventListener('click', function() {
+optionAButton.addEventListener("click", function () {
   // Επιλέγουμε το στοιχείο παραγράφου μέσα στην κλάση "dialog"
-  const dialogParagraph = document.querySelector('.dialog p');
+  const dialogParagraph = document.querySelector(".dialog p");
 
   // Αλλάζουμε το περιεχόμενο του παραγράφου
-  dialogParagraph.textContent = 'Νέο περιεχόμενο για την επιλογή Α';
+  dialogParagraph.textContent = "Νέο περιεχόμενο για την επιλογή Α";
 });
