@@ -6,4 +6,5 @@ const optionAButton = document.getElementById("optionA");
 // Προσθέτουμε έναν ακροατή για το γεγονός "click" στο κουμπί "optionA"
 optionAButton.addEventListener("click", function () {
   eventCreationInstance.handlePlayerClicks();
+  
 });
