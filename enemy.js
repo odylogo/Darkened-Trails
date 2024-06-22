@@ -23,5 +23,6 @@ randomEnemyLevel() {
 
 export function spawnEnemy() {
   const enemy = new Enemy();
+  
   console.log(`A ${enemy.name} of level ${enemy.level} has appeared.`);
 }
