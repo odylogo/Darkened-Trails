@@ -16,6 +16,7 @@ export class EventCreation {
       new findingCave(),
       new findingTreasures(),
     ];
+    
   }
 
   getRandomEvent() {
