@@ -68,8 +68,8 @@ body::before {
   display: inline-block;
   width: 80%;
   border: 0.5px solid black;
-  vertical-align: top;
-  margin-top: 50px;
+  vertical-align: center;
+  margin-top: 5%;
   background-color: rgba(211, 211, 211, 0.2);
 }
 
@@ -79,8 +79,9 @@ body::before {
   padding: 10px 20px;
   grid-template-areas:
     "dialog dialog"
-    "optionA optionB"
-    "optionC optionD";
+    "optionA optionB "
+    "optionC optionD "
+    "start start";
   gap: 12px;
   padding: 12px;
 }
@@ -110,4 +111,16 @@ body::before {
   border-bottom: 1px solid black;
   grid-area: dialog;
   text-align: start;
+}
+
+#start {
+  grid-area: start;
+  justify-self: end; 
+  padding: 10px 20px;
+}
+
+#containerStatsDialog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
