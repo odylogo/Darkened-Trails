@@ -81,7 +81,7 @@ body::before {
     "dialog dialog"
     "optionA optionB "
     "optionC optionD "
-    "start start";
+   " start start";
   gap: 12px;
   padding: 12px;
 }
@@ -115,7 +115,7 @@ body::before {
 
 #start {
   grid-area: start;
-  justify-self: end; 
+  justify-self: end; /* Moves the button to the right within its grid area */
   padding: 10px 20px;
 }
 
