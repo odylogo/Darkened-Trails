@@ -1,24 +1,18 @@
-// events.js
 import { findingCave } from './caves.js';
 import { findingTreasures } from './chest.js';
 import { spawnEnemy } from './enemy.js';
 
-class Event {
-  constructor(name) {
-    this.name = name;
-  }
-}
 
-export class EventCreation {
+
+ class EventCreation {
   constructor() {
     this.events = [
-          spawnEnemy(),
-      new findingCave(),
-      new findingTreasures(),
+          spawnEnemy.bind(this),
+           findingCave.bind(this),
+           findingTreasures.bind(this)
     ];
-    
-  }
 
+  }
   getRandomEvent() {
     const randomIndex = Math.floor(Math.random() * this.events.length);
     return this.events[randomIndex];
@@ -26,15 +20,18 @@ export class EventCreation {
 
   handlePlayerClicks() {
     const event = this.getRandomEvent();
-    this.activateEvent(event);
-  }
-  activateEvent(event) {
-    // Προσθέστε τη λογική για την ενεργοποίηση του event εδώ
-    console.log(`Event activated: ${event}`);
-  }
-}
+    return this.activateEvent(event);
+   } 
 
-export const eventCreationInstance = new EventCreation();
+  activateEvent(event) {
+    event(); 
+  }
+ }
+
+ export const eventCreationInstance=
+  new EventCreation();
+ 
+
 
 
 
