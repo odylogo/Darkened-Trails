@@ -14,3 +14,4 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(startRound, 30000);
   });
 });
+
