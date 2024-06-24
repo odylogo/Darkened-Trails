@@ -29,3 +29,4 @@ export function findingCave() {
   console.log(`You found a cave size of ${cave.size} and difficulty ${cave.difficulty} proceed ${cave.cautionLevel}`);
   return `You found a cave of size  ${cave.size} and a difficulty  of ${cave.difficulty}, proceed ${cave.cautionLevel}`
 }
+
